@@ -27,7 +27,7 @@
         return (
           <div>
             <div className="input-container">
-              <label htmlFor="minutes">Minute</label>
+              <label htmlFor="minutes">Minutes</label>
               <input 
                 value={inverted ? amount*60 : amount} 
                 id="minutes" 
@@ -35,11 +35,11 @@
                 type="number"
                 onChange={onChange}
                 disabled={inverted}
-                style={{ width: '150px' }} // 크기를 조절하려면 이 부분을 수정
+                style={{ width: '150px' }}
               />
             </div>
             <div className="input-container">
-              <label htmlFor="hours">Hour</label>
+              <label htmlFor="hours">Hours</label>
               <input 
                 value={inverted ? amount : (amount/60).toFixed(1)}
                 id="hours" 
@@ -47,7 +47,7 @@
                 type="number"
                 disabled={!inverted}
                 onChange={onChange}
-                style={{ width: '150px' }} // 크기를 조절하려면 이 부분을 수정
+                style={{ width: '150px' }} 
               />
             </div>
             <button onClick={reset}>Reset</button>
@@ -77,7 +77,7 @@
                 type="number"
                 onChange={onChange}
                 disabled={inverted}
-                style={{ width: '150px' }} // 크기를 조절하려면 이 부분을 수정
+                style={{ width: '150px' }} 
               />
             </div>
             <div className="input-container">
@@ -89,7 +89,7 @@
                 type="number"
                 disabled={!inverted}
                 onChange={onChange}
-                style={{ width: '150px' }} // 크기를 조절하려면 이 부분을 수정
+                style={{ width: '150px' }} 
               />
             </div>
             <button onClick={reset}>Reset</button>
@@ -107,7 +107,7 @@
             <h1>Super Converter</h1>
             <select value={index} onChange={onSelect} className="select-box">
               <option value="xx">Select your units</option>
-              <option value="0">Minute & Hour</option>
+              <option value="0">Minutes & Hours</option>
               <option value="1">Km & Miles</option> 
             </select>
             <br />
