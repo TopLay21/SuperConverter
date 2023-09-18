@@ -1,3 +1,4 @@
+/* 스타일 파일 (예: styles.css) */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -29,7 +30,6 @@ select {
 
 label{
   width: 100%;
-  padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
   flex: 1; /* 레이블을 확장하여 오른쪽으로 이동 */
@@ -37,11 +37,17 @@ label{
   margin-right: 20px; /* 원하는 간격 설정 */
 }
 
+.input-container label {
+  flex: 1; /* 남은 공간 모두 사용 */
+  white-space: nowrap; /* 글자 줄 바꿈 없이 한 줄로 유지 */
+  margin-right: 10px; /* 레이블과 입력칸 사이 간격 설정 (선택 사항) */
+}
+
 /* 모든 입력칸을 통일 크기로 설정 */
 .input-container input {
   width: 100px; /* 원하는 너비로 설정 */
+  white-space: nowrap; /* 줄 바꿈 없이 글자를 한 줄로 유지 */
   margin-right: 20px; /* 오른쪽 여백 추가 (선택 사항) */
-  display: block; /* 입력칸을 세로로 나열 */
 }
 
 input {
@@ -74,7 +80,7 @@ button:hover {
 }
 
 .select-box {
-  width: 280px;
+  width: 300px;
   background-color: transparent;
   border: none;
   outline: none;
