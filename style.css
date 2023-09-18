@@ -10,26 +10,47 @@ body {
   margin: 0;
 }
 
-.container {
-  max-width: 400px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-select,
-label,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label{
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  flex: 1; /* 레이블을 확장하여 오른쪽으로 이동 */
+  text-align: right; /* 레이블 텍스트를 오른쪽 정렬 */
+  margin-right: 20px; /* 원하는 간격 설정 */
+}
+
+/* 모든 입력칸을 통일 크기로 설정 */
+.input-container input {
+  width: 100px; /* 원하는 너비로 설정 */
+  margin-right: 20px; /* 오른쪽 여백 추가 (선택 사항) */
+  display: block; /* 입력칸을 세로로 나열 */
+}
+
 input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
+  flex: 3;
 }
 
 button {
@@ -40,6 +61,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-right:  10px;
 }
 
 button:hover {
@@ -50,4 +72,17 @@ button:hover {
 .box-image {
   width: 100px; /* 이미지 크기 조절 */
   margin: 0 auto; /* 가운데 정렬 */
+}
+
+.select-box {
+  width: 280px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000; /* 원하는 색상 및 스타일로 설정 */
+}
+
+/* Minutes 입력칸 스타일 수정 */
+#minutes {
+  margin-right: 20px; /* 오른쪽 여백 추가 (선택 사항) */
 }
